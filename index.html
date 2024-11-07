@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/css/all.css">
+</head>
+<body>
+  <section class="addTicket-panel">
+    <div class="addTicket-img">
+      <img src="./assets/images/main_img.png" alt="">
+      <img src="./assets/images/logo.png" alt="">
+    </div>
+    <form action="#" class="addTicket-form">
+      <h1 class="title"><span class="material-symbols-outlined">add_circle</span>新增旅遊套片</h1>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketName">套票名稱</label>
+          <input type="text" id="ticketName" placeholder="請填寫套票名稱">
+        </div>
+        <div class="alert-message">
+          <p>
+            <!-- <span class="material-symbols-outlined">error</span>必填！ -->
+          </p>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketImgUrl">圖片網址</label>
+          <input type="text" id="ticketImgUrl" placeholder="請填寫圖片網址">
+        </div>
+        <div class="alert-message">
+          <p>
+            <!-- <span class="material-symbols-outlined">error</span>必填！ -->
+          </p>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketRegion">景點地區</label>
+          <select name="景點地區" id="ticketRegion">
+            <option value="" disabled selected hidden>請選擇景點地區</option>
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="高雄">高雄</option>
+          </select>
+        </div>
+        <div class="alert-message">
+          <p>
+            <!-- <span class="material-symbols-outlined">error</span>必填！ -->
+          </p>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketPrice">套票金額</label>
+          <input type="number" id="ticketPrice" placeholder="請填寫套票金額">
+        </div>
+        <div class="alert-message">
+          <p>
+            <!-- <span class="material-symbols-outlined">error</span>必填！ -->
+          </p>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketNum">套票組數</label>
+          <input type="number" id="ticketNum" placeholder="請填寫套票組數">
+        </div>
+        <div class="alert-message">
+          <p>
+            <!-- <span class="material-symbols-outlined">error</span>必填！ -->
+          </p>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketRate">套票星級</label>
+          <input type="number" id="ticketRate" placeholder="請填寫套票星級">
+        </div>
+        <div class="alert-message">
+          <p>
+            <!-- <span class="material-symbols-outlined">error</span>必填！ -->
+          </p>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="addTicket-input">
+          <label for="ticketDescription">套票描述</label>
+          <textarea name="套票描述" id="ticketDescription" placeholder="請填寫套票描述 (限 100 字)"></textarea>
+        </div>
+        <div class="alert-message">
+          <p>
+            <!-- <span class="material-symbols-outlined">error</span>必填！ -->
+          </p>
+        </div>
+      </div>
+      <input type="button" class="addTicket-btn" value="新增套票">
+    </form>
+  </section>
+
+  <section class="main-content">
+    <div class="search-area">
+      <select name="地區搜尋" class="regionSearch">
+        <option value="地區搜尋" disabled selected hidden>地區搜尋</option>
+            <option value="全部地區">全部地區</option>
+            <option value="台北">台北</option>
+            <option value="台中">台中</option>
+            <option value="高雄">高雄</option>
+            <option value="外太空">外太空</option>
+      </select>
+      <p id="searchResult-text">本次搜尋共 3 筆資料</p>
+    </div>
+    <!-- 套票卡片區 -->
+  <ul class="ticketCard-area">
+    <li class="ticketCard">
+      <div class="ticketCard-img">
+        <a href="#">
+          <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true" alt="">
+        </a>
+        <div class="ticketCard-region">高雄</div>
+        <div class="ticketCard-rank">1</div>
+      </div>
+      <div class="ticketCard-content">
+        <div>
+          <h3>
+            <a href="#" class="ticketCard-name">綠島自由行套裝行程</a>
+          </h3>
+          <p class="ticketCard-descripttion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, incidunt!
+          </p>
+        </div>
+        <div class="ticketCard-info">
+          <p class="ticketCard-num">
+            <span class="material-symbols-outlined">error</span>剩下最後
+            <span id="ticketCard-num"> 87 </span>組
+          </p>
+          <p class="ticketCard-price">
+            TWD <span id="ticketCard-price">$1400</span>
+          </p>
+        </div>
+      </div>
+    </li>
+    <li class="ticketCard">
+      <div class="ticketCard-img">
+        <a href="#">
+          <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true" alt="">
+        </a>
+        <div class="ticketCard-region">高雄</div>
+        <div class="ticketCard-rank">10</div>
+      </div>
+      <div class="ticketCard-content">
+        <div>
+          <h3>
+            <a href="#" class="ticketCard-name">綠島自由行套裝行程</a>
+          </h3>
+          <p class="ticketCard-descripttion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, incidunt!
+          </p>
+        </div>
+        <div class="ticketCard-info">
+          <p class="ticketCard-num">
+            <span class="material-symbols-outlined">error</span>剩下最後
+            <span id="ticketCard-num"> 87 </span>組
+          </p>
+          <p class="ticketCard-price">
+            TWD <span id="ticketCard-price">$1400</span>
+          </p>
+        </div>
+      </div>
+    </li>
+    <li class="ticketCard">
+      <div class="ticketCard-img">
+        <a href="#">
+          <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true" alt="">
+        </a>
+        <div class="ticketCard-region">高雄</div>
+        <div class="ticketCard-rank">10</div>
+      </div>
+      <div class="ticketCard-content">
+        <div>
+          <h3>
+            <a href="#" class="ticketCard-name">綠島自由行套裝行程</a>
+          </h3>
+          <p class="ticketCard-descripttion">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, incidunt!
+          </p>
+        </div>
+        <div class="ticketCard-info">
+          <p class="ticketCard-num">
+            <span class="material-symbols-outlined">error</span>剩下最後
+            <span id="ticketCard-num"> 87 </span>組
+          </p>
+          <p class="ticketCard-price">
+            TWD <span id="ticketCard-price">$1400</span>
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <!-- 查無關鍵字區 -->
+  <div class="cantFind-area">
+    <h3>查無此關鍵字資料</h3>
+    <img src="./assets/images/no_found.png" alt="">
+  </div>
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <script src="all.js"></script>
+</body>
+</html>
